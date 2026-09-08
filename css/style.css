@@ -294,7 +294,7 @@ h1 { font-weight: 400; }
   display: block;
 }
 .hero-video-card .media-caption {
-  position: absolute; left: 16px; bottom: 16px; right: 16px;
+  position: absolute; left: 16px; top: 16px; right: 16px;
   color: var(--white);
   font-size: 12.5px;
   background: rgba(27,26,22,0.55);
@@ -303,7 +303,23 @@ h1 { font-weight: 400; }
   border-radius: 100px;
   pointer-events: none;
   text-align: center;
+  transition: opacity .25s var(--ease);
 }
+.hero-video-card.is-playing .media-caption { opacity: 0; }
+
+.hero-video-card .video-play-btn {
+  position: absolute; inset: 0; margin: auto;
+  width: 72px; height: 72px;
+  border-radius: 100%;
+  background: rgba(245,240,234,0.92);
+  color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 12px 30px -8px rgba(0,0,0,0.45);
+  transition: transform .25s var(--ease), opacity .25s var(--ease);
+}
+.hero-video-card .video-play-btn:hover { transform: scale(1.08); }
+.hero-video-card .video-play-btn svg { margin-left: 4px; }
+.hero-video-card.is-playing .video-play-btn { opacity: 0; pointer-events: none; }
 
 @media (min-width: 860px) {
   .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 56px; }
@@ -418,7 +434,11 @@ h1 { font-weight: 400; }
   margin: 14px 0 18px;
 }
 .method-step h3 { font-size: 1.2rem; margin-bottom: 10px; }
-.method-step p { color: var(--text-muted); margin: 0; font-size: 0.98rem; }
+.method-step p { color: var(--text-muted); margin: 0 0 18px; font-size: 0.98rem; }
+.method-step .strip { display: flex; gap: 6px; }
+.method-step .strip .texture { flex: 1; aspect-ratio: 4/3; border-radius: var(--radius-sm); }
+.method-step .strip .texture .texture-label { font-size: 10.5px; left: 10px; bottom: 8px; }
+.method-step .strip svg { opacity: 0.55; }
 
 /* ---------- Comparison ---------- */
 .compare-wrap {

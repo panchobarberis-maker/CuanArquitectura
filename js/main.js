@@ -70,6 +70,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const heroVideo = document.getElementById('hero-video');
+  const heroVideoCard = document.getElementById('hero-video-card');
+  const heroPlayBtn = heroVideoCard && heroVideoCard.querySelector('.video-play-btn');
+  if (heroVideo && heroVideoCard && heroPlayBtn) {
+    heroPlayBtn.addEventListener('click', () => heroVideo.play());
+    heroVideo.addEventListener('play', () => heroVideoCard.classList.add('is-playing'));
+    heroVideo.addEventListener('pause', () => heroVideoCard.classList.remove('is-playing'));
+    heroVideo.addEventListener('ended', () => heroVideoCard.classList.remove('is-playing'));
+  }
+
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxCaption = document.getElementById('lightbox-caption');
