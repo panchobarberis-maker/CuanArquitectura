@@ -273,32 +273,46 @@ h1 { font-weight: 400; }
 }
 .hero-grid {
   display: grid;
-  gap: 48px;
-  align-items: end;
+  gap: 40px;
+  align-items: center;
 }
 .hero h1 { max-width: 15em; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
-.hero-media {
-  margin-top: 56px;
+
+.hero-video-wrap { display: flex; justify-content: center; }
+.hero-video-card {
+  position: relative;
+  width: min(100%, 320px);
+  aspect-ratio: 9/16;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  aspect-ratio: 16/8.2;
-  position: relative;
   box-shadow: var(--shadow);
+  background: var(--charcoal);
 }
-.hero-media img { width: 100%; height: 100%; object-fit: cover; }
-.hero-media .media-caption {
-  position: absolute; left: 24px; bottom: 24px;
+.hero-video-card video {
+  width: 100%; height: 100%; object-fit: cover;
+  display: block;
+}
+.hero-video-card .media-caption {
+  position: absolute; left: 16px; bottom: 16px; right: 16px;
   color: var(--white);
-  font-size: 13px;
+  font-size: 12.5px;
   background: rgba(27,26,22,0.55);
   backdrop-filter: blur(6px);
   padding: 8px 14px;
   border-radius: 100px;
+  pointer-events: none;
+  text-align: center;
+}
+
+@media (min-width: 860px) {
+  .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 56px; }
+  .hero-video-wrap { justify-content: flex-end; }
+  .hero-video-card { width: min(100%, 300px); }
 }
 @media (max-width: 720px) {
   .hero { padding-top: 120px; }
-  .hero-media { aspect-ratio: 4/5; }
+  .hero-video-wrap { margin-top: 40px; }
 }
 
 /* ---------- Texture placeholders (in lieu of un-licensed stock photography) ---------- */
@@ -360,7 +374,7 @@ h1 { font-weight: 400; }
 .two-col-cards { display: grid; gap: 20px; margin-top: 40px; }
 @media (min-width: 780px) { .two-col-cards { grid-template-columns: 1fr 1fr; } }
 .result-card {
-  background: var(--ink);
+  background: var(--charcoal);
   color: var(--text-on-dark);
   border-radius: var(--radius-lg);
   padding: 36px;
@@ -757,7 +771,51 @@ h1 { font-weight: 400; }
   padding: clamp(36px, 6vw, 64px);
   text-align: center;
 }
+.cta-band.bg-dark { background: var(--charcoal); }
 .cta-band .btn { margin-top: 28px; }
+
+/* ---------- WhatsApp floating button ---------- */
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  width: 58px;
+  height: 58px;
+  border-radius: 100%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px -8px rgba(27,26,22,0.45);
+  transition: transform .25s var(--ease);
+}
+.whatsapp-float:hover { transform: scale(1.08); }
+.whatsapp-float svg { width: 28px; height: 28px; }
+
+/* ---------- Lightbox ---------- */
+.lightbox-overlay {
+  position: fixed; inset: 0;
+  background: rgba(27,26,22,0.92);
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.lightbox-overlay.is-open { display: flex; }
+.lightbox-overlay img { max-width: min(900px, 92vw); max-height: 82vh; border-radius: var(--radius); object-fit: contain; }
+.lightbox-overlay .lightbox-caption { position: absolute; left: 0; right: 0; bottom: 28px; text-align: center; color: var(--beige-deep); font-size: 14px; }
+.lightbox-close {
+  position: absolute; top: 22px; right: 22px;
+  width: 44px; height: 44px; border-radius: 100%;
+  background: rgba(245,240,234,0.1);
+  border: 1px solid var(--line-on-dark);
+  color: var(--beige);
+  display: flex; align-items: center; justify-content: center;
+}
+[data-lightbox] { cursor: zoom-in; }
 
 /* Skip link */
 .skip-link {

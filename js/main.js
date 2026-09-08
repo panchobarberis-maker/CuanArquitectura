@@ -70,6 +70,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxClose = document.getElementById('lightbox-close');
+  if (lightbox && lightboxImg) {
+    const openLightbox = (src, caption) => {
+      lightboxImg.src = src;
+      lightboxImg.alt = caption || '';
+      lightboxCaption.textContent = caption || '';
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    };
+    document.querySelectorAll('[data-lightbox]').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.currentSrc || img.src, img.dataset.caption || img.alt));
+    });
+    lightboxClose && lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+  }
+
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
