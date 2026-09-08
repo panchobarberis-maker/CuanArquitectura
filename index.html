@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cuan Arquitectura</title>
@@ -30,8 +33,13 @@
   "sameAs": ["https://instagram.com/cuan.arquitectura"]
 }
 </script>
+<script>document.documentElement.classList.add('reveal-ready')</script>
+</head>
+<body>
 
 <a class="skip-link" href="#main">Saltar al contenido</a>
+
+<div class="scroll-progress" aria-hidden="true"><span class="scroll-progress-fill"></span></div>
 
 <header class="site-header on-dark">
   <div class="container">
@@ -85,7 +93,7 @@
           </div>
         </div>
         <div class="hero-video-wrap">
-          <div class="hero-video-card" id="hero-video-card">
+          <div class="video-card hero-video-card" id="hero-video-card">
             <video id="hero-video" controls preload="metadata" poster="assets/img/vale-cuan-poster.jpg" playsinline>
               <source src="assets/video/vale-cuan.mp4" type="video/mp4">
             </video>
@@ -102,28 +110,28 @@
   <!-- ================= PAIN POINTS ================= -->
   <section class="section-pad bg-beige">
     <div class="container">
-      <div class="callout-card">
+      <div class="callout-card accent-green" data-reveal>
         <p class="h-md">Sabés cómo querés que se sienta tu cocina… pero no sabés cómo tomar todas las decisiones para llegar a ese resultado.</p>
         <p class="lede">Si estás por empezar una obra o reformar tu cocina, probablemente te esté pasando algo de esto:</p>
       </div>
       <div class="pain-grid">
-        <div class="pain-item">
+        <div class="pain-item" data-reveal>
           <span class="x-mark">✕</span>
           <p>Te da miedo que la reforma se vuelva un caos.</p>
         </div>
-        <div class="pain-item">
+        <div class="pain-item" data-reveal>
           <span class="x-mark">✕</span>
           <p>Te preocupa equivocarte en decisiones importantes.</p>
         </div>
-        <div class="pain-item">
+        <div class="pain-item" data-reveal>
           <span class="x-mark">✕</span>
           <p>Tenés muchas ideas y referencias, pero no sabés cómo llevarlas a tu espacio.</p>
         </div>
-        <div class="pain-item">
+        <div class="pain-item" data-reveal>
           <span class="x-mark">✕</span>
           <p>Te cuesta encontrar la mejor distribución para tu cocina.</p>
         </div>
-        <div class="pain-item" style="grid-column: 1 / -1;">
+        <div class="pain-item" data-reveal style="grid-column: 1 / -1;">
           <span class="x-mark">✕</span>
           <p>Tenés que elegir materiales, muebles e iluminación, pero no sabés qué va a funcionar en conjunto.</p>
         </div>
@@ -134,18 +142,18 @@
   <!-- ================= SOLUTION ================= -->
   <section class="section-pad bg-white">
     <div class="container">
-      <div class="section-head center">
+      <div class="section-head center" data-reveal>
         <span class="eyebrow" style="justify-content:center;">Cómo trabajamos</span>
         <h2 class="h-lg" style="margin-top:14px;">Nos encargamos de diseñar y planificar tu cocina de principio a fin</h2>
         <p class="lede" style="margin:16px auto 0;">Para que puedas disfrutar del proceso con la tranquilidad de saber que cada decisión está pensada antes de empezar. Te ayudamos a lograr dos cosas:</p>
       </div>
       <div class="two-col-cards">
-        <div class="result-card">
+        <div class="result-card" data-reveal>
           <span class="tag">Resultado</span>
           <h3>Tener una cocina única, funcional y pensada para vos.</h3>
           <p>Diseñamos cada detalle según tu espacio, tus hábitos y tu estilo, para que el resultado no solo se vea increíble, sino que funcione en tu día a día.</p>
         </div>
-        <div class="result-card">
+        <div class="result-card" data-reveal>
           <span class="tag">Experiencia</span>
           <h3>Un proceso ordenado, sin sorpresas.</h3>
           <p>Te acercamos un presupuesto de ejecución claro para que puedas tener una reforma ordenada y sin estrés. Planificamos y definimos cada decisión antes de ejecutar, para reducir imprevistos y que sepas qué va a pasar en cada etapa.</p>
@@ -157,13 +165,13 @@
   <!-- ================= MÉTODO ================= -->
   <section id="metodo" class="section-pad bg-beige-deep">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="eyebrow">Nuestro método</span>
         <h2 class="h-lg" style="margin-top:14px;">Un proceso pensado para que tomes cada decisión con seguridad</h2>
         <p class="lede" style="margin-top:16px;">No es magia: es un sistema de cuatro etapas, diseñado para que llegues a la mejor versión de tu cocina sin improvisar sobre la marcha.</p>
       </div>
       <div class="method-list">
-        <div class="method-step">
+        <div class="method-step" data-reveal>
           <span class="num">01</span>
           <div class="icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M13.5 13.5L18 18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
@@ -175,7 +183,7 @@
             <div class="texture"><svg viewBox="0 0 100 75" preserveAspectRatio="none"><g stroke="#2C2A2B" stroke-width="0.6" fill="none" opacity="0.35"><rect x="8" y="8" width="84" height="59"/><line x1="50" y1="8" x2="50" y2="67"/></g></svg><span class="texture-label">Medición 02</span></div>
           </div>
         </div>
-        <div class="method-step">
+        <div class="method-step" data-reveal>
           <span class="num">02</span>
           <div class="icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 17L4 13.5L13.5 4L16 6.5L6.5 16L3 17Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
@@ -183,7 +191,7 @@
           <h3>Diseño &amp; Visualización</h3>
           <p>Trabajamos distintas alternativas de distribución y funcionalidad hasta encontrar la mejor solución. Luego definimos materiales, interiores, herrajes, iluminación y equipamiento, y lo visualizamos con renders realistas hasta llegar al diseño final.</p>
         </div>
-        <div class="method-step">
+        <div class="method-step" data-reveal>
           <span class="num">03</span>
           <div class="icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="2.5" width="14" height="15" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M6.5 7.5H13.5M6.5 10.5H13.5M6.5 13.5H10.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
@@ -191,7 +199,7 @@
           <h3>Entrega &amp; Plan de acción</h3>
           <p>Mientras avanzamos con el diseño, comenzamos a cotizar el proyecto para poder tomar decisiones teniendo en cuenta costos reales. Te entregamos la documentación, especificaciones y toda la información necesaria para llevarlo a la realidad.</p>
         </div>
-        <div class="method-step">
+        <div class="method-step" data-reveal>
           <span class="num">04</span>
           <div class="icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2.5" y="3.5" width="15" height="14" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M2.5 7.5H17.5" stroke="currentColor" stroke-width="1.4"/><path d="M6 2V5M14 2V5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
@@ -210,13 +218,13 @@
   <!-- ================= COMPARISON ================= -->
   <section class="section-pad bg-white">
     <div class="container">
-      <div class="section-head center">
+      <div class="section-head center" data-reveal>
         <span class="eyebrow" style="justify-content:center;">Por qué CUAN</span>
         <h2 class="h-lg" style="margin-top:14px;">Dejá de posponer el sueño de tu cocina nueva</h2>
         <p class="lede" style="margin:16px auto 0;">Es hora de cambiar. Pasá de manejar tu reforma sola/o a tener un equipo que te acompaña en cada etapa y te da resultados.</p>
       </div>
       <div class="compare-wrap">
-        <div class="compare-col neg">
+        <div class="compare-col neg" data-reveal>
           <h3>Reformando sin CUAN</h3>
           <ul>
             <li><span class="mark">✕</span>Pedís presupuestos por tu cuenta y no sabés bien qué comparar.</li>
@@ -227,7 +235,7 @@
             <li><span class="mark">✕</span>Terminás siendo vos quien resuelve cada imprevisto.</li>
           </ul>
         </div>
-        <div class="compare-col pos">
+        <div class="compare-col pos" data-reveal>
           <h3>Diseñando y reformando con CUAN</h3>
           <ul>
             <li><span class="mark">✓</span>Te asegurás de llegar a la mejor versión de tu cocina, con un diseño pensado para vos.</li>
@@ -246,16 +254,16 @@
   <section class="section-pad--sm bg-green">
     <div class="container">
       <div class="stat-bar">
-        <div class="stat">
-          <b>+130</b>
+        <div class="stat" data-reveal>
+          <b data-count="130" data-prefix="+">0</b>
           <p>Proyectos diseñados. Experiencia aplicada a cada decisión.</p>
         </div>
-        <div class="stat">
-          <b>+70</b>
+        <div class="stat" data-reveal>
+          <b data-count="70" data-prefix="+">0</b>
           <p>Reformas de cocina ejecutadas en Capital y GBA.</p>
         </div>
-        <div class="stat">
-          <b>100%</b>
+        <div class="stat" data-reveal>
+          <b data-count="100" data-suffix="%">0</b>
           <p>Personalizado. Cada cocina se diseña desde cero para quien la va a vivir.</p>
         </div>
       </div>
@@ -265,13 +273,13 @@
   <!-- ================= PROYECTOS ================= -->
   <section id="proyectos" class="section-pad bg-beige">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="eyebrow">Proyectos</span>
         <h2 class="h-lg" style="margin-top:14px;">Cocinas pensadas para cada espacio, cada familia y cada forma de vivir</h2>
         <p class="lede" style="margin-top:16px;">Más de 100 proyectos ya pasaron por nuestro proceso de diseño.</p>
       </div>
 
-      <div class="ba-wrap">
+      <div class="ba-wrap" data-reveal>
         <figure>
           <img data-lightbox src="assets/img/proyecto-belgrano-01.jpg" data-caption="Proyecto Belgrano — Antes" alt="Cocina antes de la reforma, con carpintería clásica y mobiliario original">
           <figcaption>Antes</figcaption>
@@ -291,28 +299,28 @@
       </div>
 
       <div class="portfolio-grid">
-        <div class="portfolio-item lg" data-category="reformas">
+        <div class="portfolio-item lg" data-category="reformas" data-reveal>
           <div class="texture texture--dark">
             <svg viewBox="0 0 400 300" preserveAspectRatio="none"><g stroke="#F5F0EA" stroke-width="0.6" fill="none" opacity="0.5"><rect x="20" y="20" width="360" height="260"/><line x1="20" y1="150" x2="380" y2="150"/><line x1="200" y1="20" x2="200" y2="280"/><rect x="40" y="40" width="140" height="90"/><rect x="220" y="170" width="140" height="90"/></g></svg>
             <span class="texture-label">Próximamente</span>
           </div>
           <span class="item-tag">Reforma integral · Palermo</span>
         </div>
-        <div class="portfolio-item sm" data-category="cocinas">
+        <div class="portfolio-item sm" data-category="cocinas" data-reveal>
           <div class="texture">
             <svg viewBox="0 0 300 340" preserveAspectRatio="none"><g stroke="#2C2A2B" stroke-width="0.6" fill="none" opacity="0.35"><rect x="24" y="24" width="252" height="292"/><line x1="24" y1="180" x2="276" y2="180"/><line x1="150" y1="24" x2="150" y2="316"/></g></svg>
             <span class="texture-label">Próximamente</span>
           </div>
           <span class="item-tag">Cocina a medida · Núñez</span>
         </div>
-        <div class="portfolio-item sm" data-category="interiores">
+        <div class="portfolio-item sm" data-category="interiores" data-reveal>
           <div class="texture texture--green">
             <svg viewBox="0 0 300 340" preserveAspectRatio="none"><g stroke="#F5F0EA" stroke-width="0.6" fill="none" opacity="0.5"><circle cx="150" cy="170" r="110"/><line x1="40" y1="170" x2="260" y2="170"/><line x1="150" y1="60" x2="150" y2="280"/></g></svg>
             <span class="texture-label">Próximamente</span>
           </div>
           <span class="item-tag">Interiorismo · San Isidro</span>
         </div>
-        <div class="portfolio-item lg" data-category="cocinas">
+        <div class="portfolio-item lg" data-category="cocinas" data-reveal>
           <div class="texture">
             <svg viewBox="0 0 400 300" preserveAspectRatio="none"><g stroke="#2C2A2B" stroke-width="0.6" fill="none" opacity="0.35"><rect x="20" y="20" width="360" height="260"/><rect x="60" y="60" width="120" height="180"/><rect x="220" y="60" width="120" height="80"/></g></svg>
             <span class="texture-label">Próximamente</span>
@@ -328,8 +336,8 @@
   <section id="nosotros" class="section-pad bg-dark">
     <div class="container">
       <div class="team-lead">
-        <img src="assets/img/equipo-fundadores.jpg" alt="Valentina Cuan y Juan Segundo Arando, fundadores de Cuan Arquitectura, en una cocina proyectada por el estudio">
-        <div>
+        <img src="assets/img/equipo-fundadores.jpg" data-reveal alt="Valentina Cuan y Juan Segundo Arando, fundadores de Cuan Arquitectura, en una cocina proyectada por el estudio">
+        <div data-reveal>
           <span class="eyebrow">Sobre nosotros</span>
           <h2 class="h-lg" style="margin-top:14px;">Dos miradas, una misma idea</h2>
           <p style="margin-top:18px;">Somos Valentina y Juan Segundo, y llegamos a CUAN desde mundos diferentes pero complementarios. Valentina, desde la arquitectura, el interiorismo, el diseño y la obra, aporta una mirada enfocada en transformar cada espacio desde la estética, la funcionalidad y, sobre todo, desde cómo lo vive cada persona.</p>
@@ -337,21 +345,21 @@
         </div>
       </div>
 
-      <div class="callout-card" style="background:rgba(245,240,234,0.06); border-color:var(--line-on-dark);">
+      <div class="callout-card" style="background:rgba(245,240,234,0.06); border-color:var(--line-on-dark);" data-reveal>
         <p class="h-md" style="color:var(--beige);">De la combinación de esas dos miradas nació CUAN, con una misma idea: crear una experiencia distinta a la que muchas personas imaginan cuando piensan en diseñar o reformar su casa.</p>
         <p class="lede" style="margin-top:14px;">Con el tiempo nos especializamos en cocinas y desarrollamos un proceso propio que une diseño, funcionalidad, visualización y planificación, para que nuestros clientes no solo lleguen a un espacio que los represente, sino que puedan disfrutar también del camino para hacerlo realidad. Hoy trabajamos junto a un equipo que comparte esa misma forma de hacer las cosas, acompañando cada proyecto desde las primeras ideas hasta el momento de llevarlo a obra.</p>
       </div>
 
       <div class="mvv-grid" style="margin-top:64px;">
-        <div class="mvv-card">
+        <div class="mvv-card" data-reveal>
           <h3>misión</h3>
           <p>Transformar la manera de diseñar y reformar una cocina. Creamos espacios pensados desde cómo vive cada persona, combinando diseño, funcionalidad y estética con un proceso claro y acompañado, para que puedas tomar cada decisión con seguridad y vivir tu reforma sin caos ni estrés.</p>
         </div>
-        <div class="mvv-card">
+        <div class="mvv-card" data-reveal>
           <h3>visión</h3>
           <p>Ser referentes en una nueva forma de diseñar y llevar una cocina a la realidad. Queremos demostrar que un gran resultado no depende solamente de un buen diseño, sino también de un buen proceso, tan disfrutable en el camino como en el resultado final.</p>
         </div>
-        <div class="mvv-card">
+        <div class="mvv-card" data-reveal>
           <h3>valores</h3>
           <ul class="values-list">
             <li>Escucha</li>
@@ -368,47 +376,47 @@
 
   <section class="section-pad bg-beige">
     <div class="container">
-      <div class="section-head center">
+      <div class="section-head center" data-reveal>
         <span class="eyebrow" style="justify-content:center;">Equipo</span>
         <h2 class="h-lg" style="margin-top:14px;">No vas a estar solo/a: este es el equipo que te va a acompañar</h2>
       </div>
       <div class="team-grid">
-        <div class="team-card">
+        <div class="team-card" data-reveal>
           <div class="team-avatar">VC</div>
           <h4>Arq. Valentina Cuan</h4>
           <p>Fundadora</p>
         </div>
-        <div class="team-card">
+        <div class="team-card" data-reveal>
           <div class="team-avatar">JA</div>
           <h4>Lic. Juan Segundo Arando</h4>
           <p>Cofundador</p>
         </div>
-        <div class="team-card">
+        <div class="team-card" data-reveal>
           <div class="team-avatar">SG</div>
           <h4>Arq. Sofía Garbarino</h4>
           <p>Equipo de diseño</p>
         </div>
-        <div class="team-card">
+        <div class="team-card" data-reveal>
           <div class="team-avatar">AD</div>
           <h4>Arq. Antonela Dcillis</h4>
           <p>Equipo de diseño</p>
         </div>
-        <div class="team-card">
+        <div class="team-card" data-reveal>
           <div class="team-avatar">MC</div>
           <h4>Arq. Melina Corona</h4>
           <p>Equipo de diseño</p>
         </div>
-        <div class="team-card">
+        <div class="team-card" data-reveal>
           <div class="team-avatar">MM</div>
           <h4>Arq. Martina Maraviglia</h4>
           <p>Equipo de diseño</p>
         </div>
-        <div class="team-card">
+        <div class="team-card" data-reveal>
           <div class="team-avatar">P</div>
           <h4>Arq. Paula</h4>
           <p>Equipo de diseño</p>
         </div>
-        <div class="team-card">
+        <div class="team-card" data-reveal>
           <div class="team-avatar">M</div>
           <h4>Arq. Mercedes</h4>
           <p>Equipo de diseño</p>
@@ -420,12 +428,46 @@
   <!-- ================= TESTIMONIOS ================= -->
   <section id="testimonios" class="section-pad bg-white">
     <div class="container">
-      <div class="section-head center">
+      <div class="section-head center" data-reveal>
         <span class="eyebrow" style="justify-content:center;">Testimonios</span>
         <h2 class="h-lg" style="margin-top:14px;">Lo que dicen quienes ya vivieron su reforma con nosotros</h2>
       </div>
+
+      <div class="video-testi-grid" style="margin-bottom:64px;">
+        <div data-reveal>
+          <div class="video-card video-testi-card" id="testi-video-pamela">
+            <span class="featured-badge">Cliente real</span>
+            <video controls preload="metadata" poster="assets/img/testimonio-pamela.jpg" playsinline>
+              <source src="assets/video/testimonio-1.mp4" type="video/mp4">
+            </video>
+            <button class="video-play-btn" aria-label="Reproducir testimonio de Pamela">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M8 5.5V20.5L20.5 13L8 5.5Z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="video-testi-name">
+            <b>Pamela</b>
+            <span class="stars">★★★★★</span>
+          </div>
+        </div>
+        <div data-reveal>
+          <div class="video-card video-testi-card" id="testi-video-sofi">
+            <span class="featured-badge">Cliente real</span>
+            <video controls preload="metadata" poster="assets/img/testimonio-sofi.png" playsinline>
+              <source src="assets/video/testimonio-2.mp4" type="video/mp4">
+            </video>
+            <button class="video-play-btn" aria-label="Reproducir testimonio de Sofi">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M8 5.5V20.5L20.5 13L8 5.5Z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="video-testi-name">
+            <b>Sofi</b>
+            <span class="stars">★★★★★</span>
+          </div>
+        </div>
+      </div>
+
       <div class="testi-grid">
-        <div class="testi-card">
+        <div class="testi-card" data-reveal>
           <div class="stars">★★★★★</div>
           <blockquote>“Llegamos con muchas dudas y salimos con un proyecto claro, con costos y tiempos definidos desde el primer momento.”</blockquote>
           <footer>
@@ -433,7 +475,7 @@
             <div class="who"><b>Cliente CUAN</b><span>Reforma de cocina · CABA</span></div>
           </footer>
         </div>
-        <div class="testi-card">
+        <div class="testi-card" data-reveal>
           <div class="stars">★★★★★</div>
           <blockquote>“El diseño en 3D nos permitió ver exactamente cómo iba a quedar antes de romper una sola pared.”</blockquote>
           <footer>
@@ -441,7 +483,7 @@
             <div class="who"><b>Cliente CUAN</b><span>Cocina a medida · Zona Norte</span></div>
           </footer>
         </div>
-        <div class="testi-card">
+        <div class="testi-card" data-reveal>
           <div class="stars">★★★★★</div>
           <blockquote>“Tener un solo interlocutor durante toda la obra nos ahorró tiempo, plata y muchos dolores de cabeza.”</blockquote>
           <footer>
@@ -450,14 +492,14 @@
           </footer>
         </div>
       </div>
-      <p class="testi-placeholder-note">Estamos recopilando los testimonios definitivos de nuestros clientes — estos textos son de referencia y se reemplazarán por citas reales antes de publicar.</p>
+      <p class="testi-placeholder-note">Los testimonios en video de Pamela y Sofi son reales. Las 3 citas de texto son de referencia y se reemplazarán por más testimonios reales a medida que los sumemos.</p>
     </div>
   </section>
 
   <!-- ================= FAQ ================= -->
   <section id="preguntas" class="section-pad bg-beige-deep">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="eyebrow">Preguntas frecuentes</span>
         <h2 class="h-lg" style="margin-top:14px;">Todo lo que necesitás saber antes de empezar</h2>
       </div>
@@ -509,7 +551,7 @@
   <!-- ================= CTA FINAL ================= -->
   <section class="section-pad">
     <div class="container">
-      <div class="cta-band bg-dark">
+      <div class="cta-band bg-dark" data-reveal>
         <span class="eyebrow" style="justify-content:center;">Empecemos</span>
         <h2 class="h-lg" style="margin-top:14px; max-width: 26em; margin-left:auto; margin-right:auto;">Si estás por construir o reformar tu cocina, podemos ayudarte a hacerlo con un proceso claro, ordenado y sin estrés</h2>
         <a href="agendar-entrevista.html" class="btn btn-primary">Quiero contarles mi proyecto</a>
@@ -564,3 +606,5 @@
   <div class="lightbox-caption" id="lightbox-caption"></div>
 </div>
 <script src="js/main.js"></script>
+</body>
+</html>

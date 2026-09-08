@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const scrollFill = document.querySelector('.scroll-progress-fill');
+  if (scrollFill) {
+    let ticking = false;
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? Math.min(Math.max(scrollTop / docHeight, 0), 1) : 0;
+      scrollFill.style.transform = `scaleY(${progress})`;
+      ticking = false;
+    };
+    updateProgress();
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(updateProgress); ticking = true; }
+    }, { passive: true });
+    window.addEventListener('resize', updateProgress);
+  }
+
   const header = document.querySelector('.site-header');
   const setScrolled = () => {
     if (!header) return;
@@ -70,15 +87,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const heroVideo = document.getElementById('hero-video');
-  const heroVideoCard = document.getElementById('hero-video-card');
-  const heroPlayBtn = heroVideoCard && heroVideoCard.querySelector('.video-play-btn');
-  if (heroVideo && heroVideoCard && heroPlayBtn) {
-    heroPlayBtn.addEventListener('click', () => heroVideo.play());
-    heroVideo.addEventListener('play', () => heroVideoCard.classList.add('is-playing'));
-    heroVideo.addEventListener('pause', () => heroVideoCard.classList.remove('is-playing'));
-    heroVideo.addEventListener('ended', () => heroVideoCard.classList.remove('is-playing'));
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const animateCount = (el) => {
+    const target = parseInt(el.dataset.count, 10);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    if (reduceMotion || isNaN(target)) {
+      el.textContent = prefix + target + suffix;
+      return;
+    }
+    const duration = 1400;
+    const start = performance.now();
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = prefix + Math.round(target * eased) + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          const counter = entry.target.querySelector('[data-count]');
+          if (counter) animateCount(counter);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => {
+      el.classList.add('is-visible');
+      const counter = el.querySelector('[data-count]');
+      if (counter) animateCount(counter);
+    });
   }
+
+  document.querySelectorAll('.video-card').forEach(card => {
+    const video = card.querySelector('video');
+    const playBtn = card.querySelector('.video-play-btn');
+    if (!video || !playBtn) return;
+    playBtn.addEventListener('click', () => video.play());
+    video.addEventListener('play', () => card.classList.add('is-playing'));
+    video.addEventListener('pause', () => card.classList.remove('is-playing'));
+    video.addEventListener('ended', () => card.classList.remove('is-playing'));
+  });
 
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
