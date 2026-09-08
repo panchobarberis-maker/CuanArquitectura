@@ -64,16 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const bookingForm = document.getElementById('booking-form');
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      bookingForm.classList.add('is-hidden');
-      const success = document.getElementById('booking-success');
-      if (success) success.classList.add('is-visible');
-    });
-  }
-
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
       const id = link.getAttribute('href');
