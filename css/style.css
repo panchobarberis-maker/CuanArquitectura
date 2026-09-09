@@ -8,6 +8,7 @@
   --green: #606856;
   --green-dark: #4A5142;
   --green-soft: #95968D;
+  --beige-ink: #8C7B5E;
   --charcoal: #2C2A2B;
   --ink: #1B1A16;
   --white: #FFFFFF;
@@ -107,8 +108,8 @@ h1 { font-weight: 400; }
 .h-lg { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
 .h-md { font-size: clamp(1.4rem, 2vw, 1.7rem); }
 
-.accent-text { color: var(--green); }
-.bg-dark .accent-text, .cta-band.bg-dark .accent-text { color: #8FA073; }
+.accent-text { color: var(--beige-ink); }
+.hero .accent-text, .bg-dark .accent-text, .bg-green .accent-text, .booking-hero .accent-text { color: #8FA073; }
 
 .lede {
   font-size: clamp(1.05rem, 1.3vw, 1.2rem);
