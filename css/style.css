@@ -2,6 +2,28 @@
    CUAN Arquitectura — Design system
    ========================================================================== */
 
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('../assets/fonts/PPNeueMontreal-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('../assets/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('../assets/fonts/PPNeueMontreal-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --beige: #F5F0EA;
   --beige-deep: #EBE2D4;
@@ -20,7 +42,7 @@
   --line-on-dark: rgba(245, 240, 234, 0.16);
 
   --font-display: 'Jost', 'Century Gothic', sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'PP Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --container: 1220px;
   --radius-sm: 10px;
