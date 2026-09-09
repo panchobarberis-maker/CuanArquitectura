@@ -445,11 +445,14 @@ h1 { font-weight: 400; }
   margin: 14px 0 18px;
 }
 .method-step h3 { font-size: 1.2rem; margin-bottom: 10px; }
-.method-step p { color: var(--text-muted); margin: 0 0 18px; font-size: 0.98rem; }
-.method-step .strip { display: flex; gap: 6px; }
-.method-step .strip .texture { flex: 1; aspect-ratio: 4/3; border-radius: var(--radius-sm); }
-.method-step .strip .texture .texture-label { font-size: 10.5px; left: 10px; bottom: 8px; }
-.method-step .strip svg { opacity: 0.55; }
+.method-step p { color: var(--text-muted); margin: 0; font-size: 0.98rem; }
+.method-step-img {
+  margin-top: 18px;
+  width: 100%;
+  max-width: 220px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+}
 
 /* ---------- Comparison ---------- */
 .compare-wrap {
