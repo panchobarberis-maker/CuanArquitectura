@@ -128,6 +128,42 @@ document.addEventListener('DOMContentLoaded', () => {
     video.addEventListener('ended', () => card.classList.remove('is-playing'));
   });
 
+  document.querySelectorAll('.ba-slider').forEach(slider => {
+    const before = slider.querySelector('.ba-before');
+    const handle = slider.querySelector('.ba-handle');
+    const divider = slider.querySelector('.ba-divider');
+    let dragging = false;
+
+    const setPosition = (clientX) => {
+      const rect = slider.getBoundingClientRect();
+      let pct = ((clientX - rect.left) / rect.width) * 100;
+      pct = Math.min(100, Math.max(0, pct));
+      before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+      handle.style.left = pct + '%';
+      divider.style.left = pct + '%';
+      slider.setAttribute('aria-valuenow', String(Math.round(pct)));
+    };
+
+    slider.addEventListener('pointerdown', (e) => {
+      dragging = true;
+      slider.setPointerCapture(e.pointerId);
+      setPosition(e.clientX);
+    });
+    slider.addEventListener('pointermove', (e) => {
+      if (dragging) setPosition(e.clientX);
+    });
+    const stopDrag = () => { dragging = false; };
+    slider.addEventListener('pointerup', stopDrag);
+    slider.addEventListener('pointercancel', stopDrag);
+
+    slider.addEventListener('keydown', (e) => {
+      const current = parseFloat(handle.style.left) || 50;
+      const rect = slider.getBoundingClientRect();
+      if (e.key === 'ArrowLeft') { e.preventDefault(); setPosition(rect.left + Math.max(current - 5, 0) / 100 * rect.width); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); setPosition(rect.left + Math.min(current + 5, 100) / 100 * rect.width); }
+    });
+  });
+
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxCaption = document.getElementById('lightbox-caption');
