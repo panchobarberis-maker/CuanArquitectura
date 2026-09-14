@@ -937,7 +937,7 @@ h1 { font-weight: 400; }
 /* ---------- Scroll progress ---------- */
 .scroll-progress {
   position: fixed;
-  left: 0; top: 0; bottom: 0;
+  left: 10px; top: 0; bottom: 0;
   width: 3px;
   z-index: 150;
   pointer-events: none;
