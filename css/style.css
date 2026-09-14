@@ -355,6 +355,21 @@ h1 { font-weight: 400; }
 .video-card .video-play-btn svg { margin-left: 4px; }
 .video-card.is-playing .video-play-btn { opacity: 0; pointer-events: none; }
 
+.sound-toggle-btn {
+  position: absolute; right: 14px; bottom: 14px;
+  width: 40px; height: 40px;
+  border-radius: 100%;
+  background: rgba(27,26,22,0.55);
+  backdrop-filter: blur(6px);
+  color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .2s var(--ease), background .2s var(--ease);
+}
+.sound-toggle-btn:hover { transform: scale(1.08); background: rgba(27,26,22,0.7); }
+.sound-toggle-btn .icon-unmuted { display: none; }
+.sound-toggle-btn[aria-pressed="true"] .icon-muted { display: none; }
+.sound-toggle-btn[aria-pressed="true"] .icon-unmuted { display: block; }
+
 .hero-video-card { width: min(100%, 320px); aspect-ratio: 9/16; }
 
 @media (min-width: 860px) {
