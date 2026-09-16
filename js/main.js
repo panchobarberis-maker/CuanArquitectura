@@ -118,16 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const heroVideo = document.getElementById('hero-video');
-  const heroSoundToggle = document.getElementById('hero-sound-toggle');
-  if (heroVideo && heroSoundToggle) {
-    heroSoundToggle.addEventListener('click', () => {
-      heroVideo.muted = !heroVideo.muted;
-      heroSoundToggle.setAttribute('aria-pressed', String(!heroVideo.muted));
-      heroSoundToggle.setAttribute('aria-label', heroVideo.muted ? 'Activar sonido' : 'Silenciar');
-    });
-  }
-
   document.querySelectorAll('.video-card').forEach(card => {
     const video = card.querySelector('video');
     const playBtn = card.querySelector('.video-play-btn');
