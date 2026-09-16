@@ -27,6 +27,10 @@ visual elements, always use the brand kit's primary colors: navy blue
 designs — keep the same visual style and colors consistent with previous
 videos.
 
+Avoid any dead air or silences in the video — do not leave gaps between
+sentences or scenes. If a silence would occur, cut it out so the pacing
+stays continuous.
+
 Script:
 "You trained the new employee… then found out they make more than you.
 

@@ -20,6 +20,10 @@ For all graphics, charts, and visual elements in this video, always use the
 brand kit's primary colors: navy blue #2E3548 and gold #F4B83F. Do not
 invent new color palettes or new graphic designs — keep the same visual
 style and colors consistent across every video.
+
+Avoid any dead air or silences in the video — do not leave gaps between
+sentences or scenes. If a silence would occur, cut it out so the pacing
+stays continuous.
 ```
 
 ## Cierre obligatorio de todos los scripts
@@ -68,4 +72,8 @@ Hit the follow button for more helpful tips.
 ## Notas de diseño
 - Colores: #2E3548 (azul marino) / #F4B83F (dorado)
 - IG: @the_lange_firm
+
+## Prompt listo para HeyGen
+
+[prompt completo: script + instrucciones de colores + instrucción de no silencios]
 ```
