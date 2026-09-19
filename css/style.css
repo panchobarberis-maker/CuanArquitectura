@@ -391,7 +391,7 @@ h1 { font-weight: 400; }
   position: absolute;
   inset: 0;
   background: var(--green);
-  opacity: 0.12;
+  opacity: 0.35;
   pointer-events: none;
 }
 
