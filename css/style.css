@@ -459,6 +459,7 @@ h1 { font-weight: 400; }
 
 .method-step--visual { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
 .method-step--visual img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.method-step--visual img.contain { object-fit: contain; background: var(--white); }
 .method-step--visual .method-step-body { padding: 24px 28px 28px; }
 .method-step--visual .num { display: block; margin-bottom: 6px; }
 .method-step--visual h3 { font-size: 1.05rem; margin-bottom: 6px; }
