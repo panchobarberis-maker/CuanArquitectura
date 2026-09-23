@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  window.addEventListener('message', (e) => {
+    if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+      if (window.fbq) fbq('track', 'Schedule');
+      if (window.gtag) gtag('event', 'schedule_meeting', { event_category: 'Calendly' });
+    }
+  });
+
   const scrollFill = document.querySelector('.scroll-progress-fill');
   if (scrollFill) {
     let ticking = false;
