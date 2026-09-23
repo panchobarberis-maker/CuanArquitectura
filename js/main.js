@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-calendly-popup]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.Calendly) {
+        e.preventDefault();
+        Calendly.initPopupWidget({ url: link.href });
+      }
+    });
+  });
+
   const scrollFill = document.querySelector('.scroll-progress-fill');
   if (scrollFill) {
     let ticking = false;
