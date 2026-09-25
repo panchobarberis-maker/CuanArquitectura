@@ -323,6 +323,11 @@ h1 { font-weight: 400; }
   width: 100%; height: 100%; object-fit: cover;
   display: block;
 }
+.video-card iframe {
+  width: 100%; height: 100%;
+  display: block;
+  border: 0;
+}
 .video-card .media-caption {
   position: absolute; left: 16px; top: 16px; right: 16px;
   color: var(--white);
