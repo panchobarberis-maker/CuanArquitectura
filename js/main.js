@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.data.event && e.data.event === 'calendly.event_scheduled') {
       if (window.fbq) fbq('track', 'Schedule');
       if (window.gtag) gtag('event', 'schedule_meeting', { event_category: 'Calendly' });
+      setTimeout(() => { window.location.href = 'gracias.html'; }, 400);
     }
   });
 
