@@ -700,6 +700,7 @@ h1 { font-weight: 400; }
   margin: 0 auto;
 }
 @media (min-width: 640px) { .video-testi-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .video-testi-grid { grid-template-columns: repeat(3, 1fr); max-width: 960px; } }
 .video-testi-card {
   aspect-ratio: 9/16;
   border: 3px solid var(--green);
