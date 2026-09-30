@@ -748,7 +748,6 @@ h1 { font-weight: 400; }
 .testi-card .who { font-size: 0.88rem; }
 .testi-card .who b { display: block; font-family: var(--font-body); font-weight: 600; color: var(--text); }
 .testi-card .who span { color: var(--text-muted); }
-.testi-placeholder-note { margin-top: 22px; font-size: 13px; color: var(--text-muted); }
 
 /* ---------- FAQ ---------- */
 .faq-list { margin-top: 40px; border-top: 1px solid var(--line); }
