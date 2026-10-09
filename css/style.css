@@ -435,6 +435,8 @@ h1 { font-weight: 400; }
 .result-card p { color: var(--text-on-dark-muted); margin: 0; }
 
 /* ---------- Method / process ---------- */
+.mid-cta { text-align: center; margin-top: 48px; }
+.mid-cta p { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 20px; }
 .method-list { display: grid; gap: 18px; margin-top: 44px; }
 @media (min-width: 860px) { .method-list { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 860px) { .method-list.method-list-3col { grid-template-columns: repeat(3, 1fr); } }
