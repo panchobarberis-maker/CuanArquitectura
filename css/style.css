@@ -439,7 +439,8 @@ h1 { font-weight: 400; }
 .mid-cta p { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 20px; }
 
 /* ---------- Recursos / blog ---------- */
-.blog-grid { display: grid; gap: 28px; margin-top: 44px; }
+.blog-grid { display: grid; gap: 28px; margin-top: 44px; grid-template-columns: 1fr; }
+@media (min-width: 700px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
 .blog-card {
   display: grid;
   gap: 0;
@@ -458,7 +459,8 @@ h1 { font-weight: 400; }
 .blog-card-body h3 { margin-top: 10px; font-size: 1.3rem; }
 .blog-card-body p { margin-top: 10px; color: var(--text-muted); }
 .blog-card-body .btn { margin-top: 18px; }
-@media (min-width: 760px) { .blog-card { grid-template-columns: 1fr 1fr; align-items: stretch; } .blog-card img { aspect-ratio: auto; height: 100%; } }
+.blog-card.featured { grid-column: 1 / -1; }
+@media (min-width: 760px) { .blog-card.featured { grid-template-columns: 1fr 1fr; align-items: stretch; } .blog-card.featured img { aspect-ratio: auto; height: 100%; } }
 
 .blog-article { max-width: 760px; margin: 0 auto; }
 .blog-article img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); display: block; margin: 36px 0; }
